@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<style>
+@font-face {
+    font-family: 'Sofia';
+    src: url("Sofia Pro Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family: 'Sofial';
+    src: url("SofiaPro-Light.ttf") format("opentype");
+}
+body {
+ background-color: #002444;
+}
+.head {
+ color: white;
+ text-align: center;
+ font-family: 'Sofia';
+ font-size: 35px;
+}
+.under {
+ color: white;
+ text-align: center;
+ margin-top: -30px;
+ font-family: 'Sofia' !important;
+  font-weight: lighter;
+ padding-left: 300px;
+}
+.user {
+ border-radius: 10px;
+ height: 30px;
+
+}
+.submit {
+ background-color: #355671;
+ color: white;
+ width: 133px;
+ height: 35px;
+
+}
+.twitter {
+display: flex;
+justify-content: center;
+}
+.head1 {
+ color: white;
+ text-align: center;
+ font-family: 'Sofia';
+ font-size: 20px;
+}
+.btn {
+ padding-left: 10px;
+ padding-top: -15px;
+}
+.ps {
+ width: 412px;
+ height: 50px;
+ background-color: white;
+ border-radius: 20px;
+ font-size: 15px;
+}
+.pstext {
+ color: black;
+ text-align: left;
+ padding-left: 20px;
+ padding-top: 17px;
+ font-family: 'Sofia' !important;
+  font-weight: lighter;
+}
+.span {
+  text-align: right !important;
+justify-content: end;
+display: flex;
+bottom: 20px;
+position: relative;
+right: 15px;
+}
+.submit {
+ background-color: #355671;
+ color: white;
+ width: 133px;
+ height: 35px;
+
+}
+.btn {
+  padding-left: 10px;
+ margin-top: -14px;
+}
+.image {
+  display: flex;
+position: inherit;
+justify-content: space-around;
+}
+.text {
+  display: flex;
+  position: inherit;
+  justify-content: space-around;
+  text-align: center;
+}
+div.gallery {
+  margin: 55px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 250px;
+  height: 377px;
+}
+
+div.desc {
+  padding: 25px;
+  text-align: center;
+  font-family: 'Sofia' !important;
+  font-weight: lighter;
+}
+.gallery1 {
+  display: flex;
+  justify-content: center;
+}
+</style>
+<body class="body">
+<div>
+<h2 class="head">Movie Recommendation System </h2>
+<p class="under">Based on Twitter Profile Analysis</p>
+</div>
+<div class="twitter">
+<center>
+  <form action = "http://localhost:5000/" method = "POST">
+     <input class="user" type="text" name="name" placeholder="Enter a Twitter username to search..." size="40"/></center>
+     <div class="btn">
+     <p><input class="submit" type = "submit" value = "Analysis" /></p>
+   </div>
+  </form>
+</div>
+<h3 class="head1">Personality Analysis of user {{ result }}:
+<center>
+<div class="ps">
+<h4 class="pstext">Openness: <span class="span"> {{personality[0]}} </span></h4>
+</div>
+<div class="ps">
+<h4 class="pstext">Conscientiousness: <span class="span"> {{personality[1]}} </span></h4>
+</div>
+<div class="ps">
+<h4 class="pstext">Extraversion: <span class="span"> {{personality[2]}} </span></h4>
+</div>
+<div class="ps">
+<h4 class="pstext">Agreeableness: <span class="span"> {{personality[3]}} </span></h4>
+</div>
+<div class="ps">
+<h4 class="pstext">Neuroticism: <span class="span"> {{personality[4]}} </span></h4>
+</div>
+<h2 class="head">Recommended Movies for {{ result }}: </h2>
+
+</center>
+
+<div class="gallery1">
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[0][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[0][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[1][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[1][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[2][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[2][0] }}</div>
+</div>
+</div>
+<div class="gallery1">
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[3][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[3][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[4][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[4][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[5][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[5][0] }}</div>
+</div>
+</div>
+<div class="gallery1">
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[6][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[6][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[7][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[7][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[8][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[8][0] }}</div>
+</div>
+</div>
+<div class="gallery1">
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[9][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[9][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[10][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[10][0] }}</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="{{movies[11][1]}}" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">{{ movies[11][0] }}</div>
+</div>
+</div>
+</body>
+</html>
