@@ -5,7 +5,6 @@ from flask import Flask, render_template, request
 from ibm_watson import PersonalityInsightsV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import numpy as np
-from collections import OrderedDict
 from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
@@ -76,7 +75,7 @@ def result():
       Moviescore = df1["ope"] + df1["con"] + df1["ext"] + df1["agr"] + df1["neu"]
       ms = Moviescore.mean()
       ps = Personalscore.mean()
-      
+
       #-----------------END OF PERSONAL SCORE
 
 
