@@ -6,9 +6,13 @@ from ibm_watson import PersonalityInsightsV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import sys
+import logging
 
 app = Flask(__name__)
 
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 # Creds for Personality Insights
 # 1 Twitter Person insight
 apikey = '5YJ2mr2pIG4-GwDsPlgFm-hA9zSLYiArXhcLVfKTi2kI'
