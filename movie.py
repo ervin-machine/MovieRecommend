@@ -114,8 +114,8 @@ def result():
       #stocklist = list(movies.flatten())
       #print(movies)
       return render_template("result.html",movies=movies, result = handle, personality = user)
-      return render_template(...) 
-    else:
+      return render_template(...)
+   else:
       return render_template('twitter.html')
 
 
