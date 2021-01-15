@@ -1,17 +1,27 @@
 <html>
 <style>
+@font-face {
+    font-family: 'Sofia';
+    src: url("Sofia Pro Bold.ttf") format("opentype");
+}
+@font-face {
+    font-family: 'Sofial';
+    src: url("sofia-pro-light.otf") format("opentype");
+}
 body {
  background-color: #002444;
 }
 .head {
  color: white;
  text-align: center;
+ font-family: 'Sofia';
  font-size: 35px;
 }
 .under {
  color: white;
  text-align: center;
  margin-top: -30px;
+ font-family: 'Sofia' !important;
   font-weight: lighter;
  padding-left: 300px;
 }
@@ -46,11 +56,11 @@ margin-top: -14px;
      <p class="under">Based on Twitter Profile Analysis</p>
      </div>
      <div class="twitter">
-
-       <form action = "https://movierecommends1.herokuapp.com" method = "POST">
-          <center><input class="user" type="text" name="name" placeholder="Enter a Twitter username to search..." size="40"/></center>
+     <center>
+       <form action = "https://movierecommends1.herokuapp.com/" method = "POST">
+          <input class="user" type="text" name="name" placeholder="Enter a Twitter username to search..." size="40"/></center>
           <div class="btn">
-          <input class="submit" type = "submit" value = "Analysis" />
+          <p><input class="submit" type = "submit" value = "Analysis" /></p>
         </div>
        </form>
    </body>
