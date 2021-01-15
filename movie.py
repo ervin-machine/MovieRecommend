@@ -34,7 +34,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 @app.route('/', methods = ['GET', 'POST'])
 def result():
    if request.method == 'GET':
-       return render_template('result.html')
+       return render_template('twitter.html')
 
    if request.method == 'POST':
 
@@ -113,7 +113,7 @@ def result():
       #movies1 = np.array(q_movies.loc[q_movies['genres'] == data1][['title', 'genres']].head(20))
       #stocklist = list(movies.flatten())
       #print(movies)
-      return render_template("result.html",movies=movies, result = handle, personality = user)
+      return render_template("test.html",movies=movies, result = handle, personality = user)
 
 
 
