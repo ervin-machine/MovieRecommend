@@ -34,7 +34,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 @app.route('/', methods = ['GET', 'POST'])
 def result():
    if request.method == 'GET':
-       return render_template('twitter.html')
+       return render_template('result.html')
 
    if request.method == 'POST':
 
