@@ -36,7 +36,6 @@ jupyterlab==2.2.9
 jupyterlab-pygments==0.1.2
 jupyterlab-server==1.2.0
 keyring==18.0.1
-language-selector==0.1
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
