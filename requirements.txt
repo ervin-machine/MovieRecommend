@@ -106,8 +106,6 @@ tmdbv3api==1.7.1
 tornado==6.1
 traitlets==4.3.3
 tweepy==3.9.0
-ubuntu-advantage-tools==20.3
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
