@@ -105,7 +105,6 @@ threadpoolctl==2.1.0
 tmdbv3api==1.7.1
 tornado==6.1
 traitlets==4.3.3
-ttystatus==0.38
 tweepy==3.9.0
 ubuntu-advantage-tools==20.3
 ubuntu-drivers-common==0.0.0
