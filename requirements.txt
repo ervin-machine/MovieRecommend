@@ -104,7 +104,6 @@ testresources==2.0.1
 threadpoolctl==2.1.0
 tmdbv3api==1.7.1
 tornado==6.1
-tqdm==4.3.3
 traitlets==5.0.5
 ttystatus==0.38
 tweepy==3.9.0
